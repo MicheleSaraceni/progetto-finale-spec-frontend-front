@@ -12,8 +12,17 @@ const GlobalProvider = ({ children }) => {
         try {
             const res = await fetch(`${apiUrl}/classes`);
             const data = await res.json();
-            setClasses(data);
             console.log("Dati ricevuti: ", data);
+
+            const detailedClasses = await Promise.all(
+                data.map(async (item) => {
+                    const resDetail = await fetch(`${apiUrl}/classes/${item.id}`);
+                    const dataDetail = await resDetail.json()
+                    return dataDetail.class;
+                })
+            );
+            console.log("Dati dettagliati ricevuti: ", detailedClasses);
+            setClasses(detailedClasses);
         }
         catch (error) {
             console.error("Errore di recupero dati: ", error)

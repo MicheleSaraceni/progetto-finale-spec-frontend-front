@@ -1,26 +1,20 @@
 import '../css/HomePage.css'
-import { useContext, useState } from "react"
+import { useContext, useState, useMemo } from "react"
 import { GlobalContext } from "../contexts/GlobalContext";
 import ClassCard from "../components/classCard"
 
 export default function HomePage() {
 
     const { classes } = useContext(GlobalContext);
-    const { searchValue, setSearchValue } = useState();
-    const { filterBy, setFilterBy } = useState();
-    const { sortOrder, setSortOrder } = useState();
+    const [searchValue, setSearchValue] = useState("");
+    const [filterBy, setFilterBy] = useState("title");
+    const [sortOrder, setSortOrder] = useState("asc");
 
-    const onSearchChange = () => {
+    const filteredClasses = useMemo(() => {
 
-    };
+        return classes.filter((cls) => cls.title.toLowerCase().includes(searchValue.toLowerCase()))
+    }, [searchValue, classes])
 
-    const onFilterChange = () => {
-
-    };
-
-    const onSortChange = () => {
-
-    };
 
     return (
         <div className="classes-container">
@@ -30,13 +24,13 @@ export default function HomePage() {
                     placeholder="Cerca..."
                     className="form-control search-input me-2"
                     value={searchValue}
-                    onChange={onSearchChange}
+                    onChange={(e) => setSearchValue(e.target.value)}
                 />
 
                 <select
                     className="form-select me-2 filter-select"
                     value={filterBy}
-                    onChange={onFilterChange}
+                    onChange={(e) => setFilterBy(e.target.value)}
                 >
                     <option value="title">Classe</option>
                     <option value="category">Categoria</option>
@@ -45,7 +39,7 @@ export default function HomePage() {
                 <select
                     className="form-select sort-select"
                     value={sortOrder}
-                    onChange={onSortChange}
+                    onChange={(e) => setSortOrder(e.target.value)}
                 >
                     <option value="asc">A-Z</option>
                     <option value="desc">Z-A</option>
@@ -53,7 +47,7 @@ export default function HomePage() {
             </div>
 
             <div className="cards-wrapper mt-4">
-                {classes.map(classData => <ClassCard classData={classData} />)}
+                {filteredClasses.map(classData => <ClassCard key={classData.id} classData={classData} />)}
             </div>
         </div>
     )
