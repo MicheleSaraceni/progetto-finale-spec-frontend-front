@@ -1,0 +1,51 @@
+/* Card base styling */
+.classcard {
+    background-color: #422e1a;
+    /* marrone scuro medievale */
+    border: 2px solid #7c4f1d;
+    /* bordo decorativo terra */
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+/* Wrapper Link removes default link styles */
+.classcard-link {
+    text-decoration: none;
+}
+
+/* Image styling */
+.classcard-img {
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #7c4f1d;
+}
+
+.classcard-body {
+    padding: 0.75rem;
+    color: #dbc276;
+    /* giallo dorato */
+    text-align: center;
+}
+
+.classcard-title {
+    font-family: 'Cinzel', serif;
+    /* font medievale */
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.classcard-category {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Hover effect: ingrandimento */
+.classcard-link:hover .classcard {
+    transform: scale(1.05);
+}
+
+/* Selettore attivo rimuove eventuali outline */
+.classcard:focus {
+    outline: none;
+}

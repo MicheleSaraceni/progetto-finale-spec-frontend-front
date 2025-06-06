@@ -1,0 +1,81 @@
+body {
+    background-color: #9c713f;
+    /* font tipico da manoscritto medievale */
+    font-family: 'Cinzel', serif;
+}
+
+.medieval-navbar {
+    background-color: #422e1a;
+    /* marrone scuro per richiamare il legno */
+    border-bottom: 4px solid #7c4f1d;
+    /* bordo decorativo color terra */
+    padding: 0.5rem 1rem;
+}
+
+.medieval-navbar .navbar-brand .brand-text {
+    color: #dbc276;
+    /* giallo dorato */
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #000;
+    /* leggera ombra per effetto incantato */
+}
+
+/* Layout inline per i nav-link */
+.medieval-navbar .nav-inline {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    /* impedisce il wrapping in più righe */
+}
+
+.medieval-navbar .nav-item {
+    display: flex;
+}
+
+.medieval-navbar .nav-link {
+    color: #dbc276;
+    /* stesso giallo dorato */
+    position: relative;
+    transition: color 0.2s ease-in-out;
+    padding: 0.5rem 0.75rem;
+}
+
+.medieval-navbar .nav-link:hover {
+    color: #f4e3b2;
+    /* tonalità più chiara per hover */
+}
+
+.medieval-navbar .active-link {
+    color: #f4d0b2;
+    /* mantiene evidenziato il link attivo */
+    text-decoration: underline;
+}
+
+/*colore della navlink selezionata oro*/
+.medieval-navbar .navbar-nav .nav-link.active,
+.medieval-navbar .navbar-nav .nav-link.show {
+    color: #ffae01;
+}
+
+/* Traccia decorativa sotto ogni nav item */
+.medieval-navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #f4e3b2;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.2s ease-in-out;
+}
+
+.medieval-navbar .nav-link:hover::after,
+.medieval-navbar .active-link::after {
+    width: 50%;
+}

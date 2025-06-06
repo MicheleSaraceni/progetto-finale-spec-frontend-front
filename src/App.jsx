@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { GlobalProvider } from "./contexts/GlobalContext"
 import DefaultLayout from "./components/layout/DefaultLayout"
 import HomePage from "./pages/HomePage"
+import ClassComparison from "./pages/ClassComparison"
+import Favorites from "./pages/Favorites"
 
 export default function App() {
 
@@ -11,6 +13,8 @@ export default function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<HomePage />} />
+            <Route path="/confronto" element={<ClassComparison />} />
+            <Route path="/preferiti" element={<Favorites />} />
           </Route>
         </Routes>
       </BrowserRouter>
