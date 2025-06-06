@@ -1,3 +1,4 @@
+import '../css/HomePage.css'
 import { useContext, useState } from "react"
 import { GlobalContext } from "../contexts/GlobalContext";
 import ClassCard from "../components/classCard"
@@ -5,6 +6,21 @@ import ClassCard from "../components/classCard"
 export default function HomePage() {
 
     const { classes } = useContext(GlobalContext);
+    const { searchValue, setSearchValue } = useState();
+    const { filterBy, setFilterBy } = useState();
+    const { sortOrder, setSortOrder } = useState();
+
+    const onSearchChange = () => {
+
+    };
+
+    const onFilterChange = () => {
+
+    };
+
+    const onSortChange = () => {
+
+    };
 
     return (
         <div className="classes-container">
@@ -22,7 +38,7 @@ export default function HomePage() {
                     value={filterBy}
                     onChange={onFilterChange}
                 >
-                    <option value="title">Titolo</option>
+                    <option value="title">Classe</option>
                     <option value="category">Categoria</option>
                 </select>
 

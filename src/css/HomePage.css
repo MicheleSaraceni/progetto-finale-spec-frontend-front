@@ -1,0 +1,38 @@
+.classes-container {
+    padding: 1rem;
+}
+
+.controls {
+    background-color: #422e1a;
+    /* marrone scuro medievale */
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.search-input,
+.filter-select,
+.sort-select {
+    background-color: #9c713f;
+    /* marrone chiaro di sfondo */
+    color: #fff;
+    border: 1px solid #7c4f1d;
+    font-family: 'Cinzel', serif;
+}
+
+.search-input::placeholder {
+    color: #dbc276;
+}
+
+.search-input:focus,
+.filter-select:focus,
+.sort-select:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #ffae01;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}

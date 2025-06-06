@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import '../../css/HeaderComponent.css'
 
 export default function HeaderComponent() {
     return (
@@ -11,7 +12,6 @@ export default function HeaderComponent() {
                     <ul className="navbar-nav nav-inline">
                         <li className="nav-item">
                             <NavLink
-                                exact
                                 to="/"
                                 className={({ isActive }) =>
                                     isActive ? "nav-link active-link" : "nav-link"
