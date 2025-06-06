@@ -52,8 +52,6 @@ body {
 
 .medieval-navbar .active-link {
     color: #f4d0b2;
-    /* mantiene evidenziato il link attivo */
-    text-decoration: underline;
 }
 
 /*colore della navlink selezionata oro*/

@@ -1,8 +1,10 @@
+import { useContext, useState } from "react"
+import { GlobalContext } from "../contexts/GlobalContext";
 import ClassCard from "../components/classCard"
 
 export default function HomePage() {
 
-
+    const { classes } = useContext(GlobalContext);
 
     return (
         <div className="classes-container">

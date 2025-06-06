@@ -13,8 +13,9 @@ export default function HeaderComponent() {
                             <NavLink
                                 exact
                                 to="/"
-                                className="nav-link"
-                                activeClassName="active-link"
+                                className={({ isActive }) =>
+                                    isActive ? "nav-link active-link" : "nav-link"
+                                }
                             >
                                 Lista classi
                             </NavLink>
@@ -22,8 +23,9 @@ export default function HeaderComponent() {
                         <li className="nav-item">
                             <NavLink
                                 to="/confronto"
-                                className="nav-link"
-                                activeClassName="active-link"
+                                className={({ isActive }) =>
+                                    isActive ? "nav-link active-link" : "nav-link"
+                                }
                             >
                                 Confronta classi
                             </NavLink>
@@ -31,8 +33,9 @@ export default function HeaderComponent() {
                         <li className="nav-item">
                             <NavLink
                                 to="/preferiti"
-                                className="nav-link"
-                                activeClassName="active-link"
+                                className={({ isActive }) =>
+                                    isActive ? "nav-link active-link" : "nav-link"
+                                }
                             >
                                 Preferiti
                             </NavLink>
