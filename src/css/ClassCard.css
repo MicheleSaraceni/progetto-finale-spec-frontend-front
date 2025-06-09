@@ -1,12 +1,14 @@
 /* Card base styling */
 .classcard {
     background-color: #422e1a;
-    /* marrone scuro medievale */
-    border: 2px solid #7c4f1d;
-    /* bordo decorativo terra */
+    border: 3px solid #7c4f1d;
     border-radius: 0.5rem;
     transition: transform 0.2s ease-in-out;
     overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 /* Wrapper Link removes default link styles */
@@ -18,7 +20,7 @@
 .classcard-img {
     height: 180px;
     object-fit: cover;
-    border-bottom: 2px solid #7c4f1d;
+    border-bottom: 3px solid #7c4f1d;
 }
 
 .classcard-body {
@@ -31,7 +33,7 @@
 .classcard-title {
     font-family: 'Cinzel', serif;
     /* font medievale */
-    font-size: 1.25rem;
+    font-size: 1.40rem;
     margin-bottom: 0.5rem;
 }
 

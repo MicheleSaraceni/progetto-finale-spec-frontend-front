@@ -4,6 +4,7 @@ export default function ClassDetail() {
 
     const { id } = useParams();
     const classID = Number(id);
+    console.log(classID)
 
     return
 }

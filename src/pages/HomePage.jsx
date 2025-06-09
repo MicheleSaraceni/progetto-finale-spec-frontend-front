@@ -66,8 +66,12 @@ export default function HomePage() {
                 </select>
             </div>
 
-            <div className="cards-wrapper mt-4">
-                {filteredClasses.map(classData => <ClassCard key={classData.id} classData={classData} />)}
+            <div className="row cards-wrapper justify-content-center align-items-stretch g-2 mt-4">
+                {filteredClasses.map(classData => (
+                    <div key={classData.id} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center">
+                        <ClassCard classData={classData} />
+                    </div>
+                ))}
             </div>
         </div>
     )
