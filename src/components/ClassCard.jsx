@@ -4,7 +4,7 @@ import '../css/ClassCard.css'
 export default function ClassCard({ classData }) {
 
     return (
-        <Link to={`/classDetail/${classData.id}`} className="classcard-link">
+        <Link to={`/dettaglioClasse/${classData.id}`} className="classcard-link">
             <div className="card classcard">
                 <img
                     src={classData.img}

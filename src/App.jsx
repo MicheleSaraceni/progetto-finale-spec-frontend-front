@@ -16,7 +16,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/confronto" element={<ClassComparison />} />
             <Route path="/preferiti" element={<Favorites />} />
-            <Route path="/classDetail/:id" element={<ClassDetail />} />
+            <Route path="/dettaglioClasse/:id" element={<ClassDetail />} />
           </Route>
         </Routes>
       </BrowserRouter>
