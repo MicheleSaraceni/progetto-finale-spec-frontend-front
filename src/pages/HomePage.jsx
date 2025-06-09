@@ -7,13 +7,31 @@ export default function HomePage() {
 
     const { classes } = useContext(GlobalContext);
     const [searchValue, setSearchValue] = useState("");
-    const [filterBy, setFilterBy] = useState("title");
+    const [filterBy, setFilterBy] = useState("");
     const [sortOrder, setSortOrder] = useState("asc");
+
+    const categories = useMemo(() => {
+        const allCats = classes.map(cls => cls.category);
+        const uniqueCats = Array.from(new Set(allCats));
+        return uniqueCats;
+    }, [classes]);
 
     const filteredClasses = useMemo(() => {
 
-        return classes.filter((cls) => cls.title.toLowerCase().includes(searchValue.toLowerCase()))
-    }, [searchValue, classes])
+        const orderedClasses = () => {
+            if (sortOrder === "asc") {
+                return classes.sort((a, b) => a.title.localeCompare(b.title))
+            } else {
+                return classes.sort((a, b) => b.title.localeCompare(a.title))
+            }
+        }
+
+        const sortedCategories = () => {
+            return orderedClasses().filter((cls) => cls.category.toLowerCase().includes(filterBy.toLowerCase()))
+        }
+
+        return sortedCategories().filter((cls) => cls.title.toLowerCase().includes(searchValue.toLowerCase()))
+    }, [searchValue, filterBy, sortOrder, classes])
 
 
     return (
@@ -32,8 +50,10 @@ export default function HomePage() {
                     value={filterBy}
                     onChange={(e) => setFilterBy(e.target.value)}
                 >
-                    <option value="title">Classe</option>
-                    <option value="category">Categoria</option>
+                    <option value="">Tutte le categorie</option>
+                    {
+                        categories.map((category) => <option key={category} value={category}>{`${category}`}</option>)
+                    }
                 </select>
 
                 <select
