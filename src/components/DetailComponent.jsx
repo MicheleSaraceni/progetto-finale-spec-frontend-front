@@ -55,7 +55,7 @@ export default function DetailComponent({ id }) {
             </div>
 
             <div className="detail-proficiency mt-4">
-                <h5>Proficienze</h5>
+                <h5>Comprtenze</h5>
                 <ul className="proficiency-list">
                     {specificClass.proficiency.map((prof, i) => (
                         <li key={i}>{prof}</li>

@@ -4,7 +4,6 @@
 
 .controls {
     background-color: #422e1a;
-    /* marrone scuro medievale */
     padding: 1rem;
     border-radius: 0.5rem;
 }
@@ -13,9 +12,8 @@
 .filter-select,
 .sort-select {
     background-color: #9c713f;
-    /* marrone chiaro di sfondo */
-    color: #fff;
-    border: 1px solid #7c4f1d;
+    color: #fde291;
+    border: 2px solid #7c4f1d;
     font-family: 'Cinzel', serif;
 }
 

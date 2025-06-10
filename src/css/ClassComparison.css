@@ -1,0 +1,33 @@
+.comparison-container {
+    padding: 1.5rem;
+    background-color: #9c713f;
+}
+
+.comparison-controls {
+    margin-bottom: 2rem;
+}
+
+.comparison-select {
+    background-color: #422e1a;
+    color: #dbc276;
+    border: 2px solid #7c4f1d;
+    font-family: 'Cinzel', serif;
+}
+
+.comparison-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.comparison-panel {
+    flex: 1;
+    padding: 0;
+}
+
+.placeholder-text {
+    color: #422e1a;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
