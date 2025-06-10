@@ -1,17 +1,17 @@
 .favorite-heart {
     position: absolute;
-    bottom: 10px;
+    top: 10px;
     right: 10px;
-    cursor: pointer;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
     width: 28px;
     height: 28px;
+    cursor: pointer;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .favorite-heart:hover {
@@ -19,44 +19,13 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.heart-shape {
-    position: relative;
+.heart-icon {
     width: 16px;
     height: 16px;
-    transform: rotate(45deg);
-    background-color: transparent;
-    border: 2px solid white;
-    transition: all 0.2s ease;
+    color: white;
+    transition: color 0.2s ease;
 }
 
-.heart-shape:before,
-.heart-shape:after {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 2px solid white;
-    transition: all 0.2s ease;
-}
-
-.heart-shape:before {
-    bottom: 7px;
-    left: -9px;
-}
-
-.heart-shape:after {
-    top: -9px;
-    right: 7px;
-}
-
-.favorite-heart.liked .heart-shape {
-    background-color: #ff3e3e;
-    border-color: #ff3e3e;
-}
-
-.favorite-heart.liked .heart-shape:before,
-.favorite-heart.liked .heart-shape:after {
-    background-color: #ff3e3e;
-    border-color: #ff3e3e;
+.heart-icon.liked {
+    color: #ff3e3e;
 }

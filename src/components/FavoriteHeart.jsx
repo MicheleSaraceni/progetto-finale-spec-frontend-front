@@ -1,16 +1,28 @@
-import { useContext } from 'react';
+import { useContext, useRef, useEffect } from 'react';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { GlobalContext } from '../contexts/GlobalContext';
-import "../css/FavoriteHeart.css"
+import '../css/FavoriteHeart.css';
 
 export default function FavoriteHeart({ id }) {
     const { liked, setLiked } = useContext(GlobalContext);
+    const heartRef = useRef(null);
 
     const isLiked = liked.includes(id);
 
-    const toggleLike = (e) => {
+    //  position: relative del genitore
+    useEffect(() => {
+        const parent = heartRef.current?.parentNode;
+        if (parent) {
+            const cs = window.getComputedStyle(parent);
+            if (cs.position === 'static') {
+                parent.style.position = 'relative';
+            }
+        }
+    }, []);
+
+    const toggleLike = e => {
         e.preventDefault();
         e.stopPropagation();
-
         setLiked(prev =>
             isLiked
                 ? prev.filter(itemId => itemId !== id)
@@ -20,10 +32,14 @@ export default function FavoriteHeart({ id }) {
 
     return (
         <div
-            className={`favorite-heart ${isLiked ? 'liked' : ''}`}
+            ref={heartRef}
+            className="favorite-heart"
             onClick={toggleLike}
         >
-            <div className="heart-shape"></div>
+            {isLiked
+                ? <FaHeart className="heart-icon liked" />
+                : <FaRegHeart className="heart-icon" />
+            }
         </div>
     );
-};
+}
