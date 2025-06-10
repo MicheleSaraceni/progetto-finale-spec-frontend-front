@@ -5,20 +5,23 @@
 .controls {
     background-color: #422e1a;
     padding: 1rem;
+    border: 3px solid #7c4f1d;
     border-radius: 0.5rem;
 }
 
 .search-input,
 .filter-select,
 .sort-select {
+    cursor: pointer;
     background-color: #9c713f;
     color: #fde291;
-    border: 2px solid #7c4f1d;
+    border: 3px solid #7c4f1d;
     font-family: 'Cinzel', serif;
 }
 
 .search-input::placeholder {
-    color: #dbc276;
+    color: #fde291;
+    font-size: 17px;
 }
 
 .search-input:focus,
@@ -27,6 +30,17 @@
     outline: none;
     box-shadow: none;
     border-color: #ffae01;
+}
+
+.search-input:focus {
+    background-color: #9c713f;
+    color: #fde291;
+}
+
+.option:hover {
+    cursor: pointer;
+    background-color: #9c713f;
+    color: #fde291;
 }
 
 .cards-wrapper {

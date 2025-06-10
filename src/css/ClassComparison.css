@@ -14,6 +14,12 @@
     font-family: 'Cinzel', serif;
 }
 
+.comparison-select:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #ffae01;
+}
+
 .comparison-content {
     display: flex;
     gap: 2rem;

@@ -5,7 +5,7 @@ import ClassCard from "../components/classCard"
 
 export default function Favorites() {
 
-    const { classes } = useContext(GlobalContext);
+    const { classes, liked } = useContext(GlobalContext);
     const [searchValue, setSearchValue] = useState("");
     const [filterBy, setFilterBy] = useState("");
     const [sortOrder, setSortOrder] = useState("asc");
@@ -30,7 +30,15 @@ export default function Favorites() {
             return orderedClasses().filter((cls) => cls.category.toLowerCase().includes(filterBy.toLowerCase()))
         }
 
-        return sortedCategories().filter((cls) => cls.title.toLowerCase().includes(searchValue.toLowerCase()))
+        const searchedTitle = () => {
+            return sortedCategories().filter((cls) => cls.title.toLowerCase().includes(searchValue.toLowerCase()))
+        }
+
+        const favoritesClass = () => {
+            return searchedTitle().filter((cls) => liked.includes(cls.id))
+        }
+
+        return favoritesClass()
     }, [searchValue, filterBy, sortOrder, classes])
 
 
@@ -67,11 +75,14 @@ export default function Favorites() {
             </div>
 
             <div className="row cards-wrapper justify-content-center align-items-stretch g-2 mt-4">
-                {filteredClasses.map(classData => (
-                    <div key={classData.id} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center">
-                        <ClassCard classData={classData} />
-                    </div>
-                ))}
+                {filteredClasses.length === 0
+                    ? <p className="placeholder-text">Non ci sono classi nei preferiti</p>
+                    : filteredClasses.map(classData => (
+                        <div key={classData.id} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center">
+                            <ClassCard classData={classData} />
+                        </div>
+                    ))
+                }
             </div>
         </div>
     )

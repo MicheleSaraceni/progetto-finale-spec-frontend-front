@@ -1,6 +1,7 @@
 import { GlobalContext } from "../contexts/GlobalContext";
 import { useContext } from "react";
 import '../css/ClassDetail.css';
+import FavoriteHeart from './FavoriteHeart';
 
 export default function DetailComponent({ id }) {
     const { classes } = useContext(GlobalContext);
@@ -67,6 +68,7 @@ export default function DetailComponent({ id }) {
                 <span>Creato: {new Date(specificClass.createdAt).toLocaleDateString()}</span>
                 <span>Aggiornato: {new Date(specificClass.updatedAt).toLocaleDateString()}</span>
             </div>
+            <FavoriteHeart id={specificClass.id} />
         </div>
     );
 }
