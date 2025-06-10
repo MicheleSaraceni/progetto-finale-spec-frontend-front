@@ -7,6 +7,7 @@ const GlobalProvider = ({ children }) => {
 
     const apiUrl = import.meta.env.VITE_API_URL;
     const [classes, setClasses] = useState([]);
+    const [liked, setLiked] = useState([]);
 
     const getData = async () => {
         try {
@@ -34,7 +35,7 @@ const GlobalProvider = ({ children }) => {
     }, [])
 
     return (
-        <GlobalContext.Provider value={{ classes, setClasses }}>
+        <GlobalContext.Provider value={{ classes, setClasses, liked, setLiked }}>
             {children}
         </GlobalContext.Provider>
     )

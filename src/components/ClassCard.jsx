@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../css/ClassCard.css'
+import FavoriteHeart from './FavoriteHeart';
 
 export default function ClassCard({ classData }) {
 
@@ -15,6 +16,7 @@ export default function ClassCard({ classData }) {
                     <h5 className="card-title classcard-title">{classData.title}</h5>
                     <p className="card-text classcard-category">{classData.category}</p>
                 </div>
+                <FavoriteHeart id={classData.id} />
             </div>
         </Link>
     )
