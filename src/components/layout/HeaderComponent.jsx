@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import '../../css/HeaderComponent.css'
+import { GiDiceTwentyFacesTwenty } from "react-icons/gi";
 
 export default function HeaderComponent() {
     return (
@@ -7,7 +8,7 @@ export default function HeaderComponent() {
             <nav className="navbar medieval-navbar">
                 <div className="container-fluid d-flex align-items-center justify-content-between">
                     <NavLink className="navbar-brand" to="/">
-                        <span className="brand-text">D&D Realm</span>
+                        <span className="brand-text">D&D<GiDiceTwentyFacesTwenty className="d20" />Realm</span>
                     </NavLink>
                     <ul className="navbar-nav nav-inline">
                         <li className="nav-item">

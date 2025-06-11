@@ -67,11 +67,14 @@ export default function HomePage() {
             </div>
 
             <div className="row cards-wrapper justify-content-center align-items-stretch g-2 mt-4">
-                {filteredClasses.map(classData => (
-                    <div key={classData.id} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center">
-                        <ClassCard classData={classData} />
-                    </div>
-                ))}
+                {filteredClasses.length !== 0
+                    ? filteredClasses.map(classData => (
+                        <div key={classData.id} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center">
+                            <ClassCard classData={classData} />
+                        </div>
+                    ))
+                    : <p className="placeholder-text">Nessuna classe con questo nome</p>
+                }
             </div>
         </div>
     )

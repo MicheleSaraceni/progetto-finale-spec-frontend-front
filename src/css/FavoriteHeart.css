@@ -9,23 +9,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.35);
     border-radius: 50%;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .favorite-heart:hover {
     transform: scale(1.1);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .heart-icon {
     width: 16px;
     height: 16px;
-    color: white;
+    color: #dbc276;
     transition: color 0.2s ease;
 }
 
 .heart-icon.liked {
-    color: #ff3e3e;
+    color: #dbc276;
 }

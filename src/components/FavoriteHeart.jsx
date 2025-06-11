@@ -1,5 +1,6 @@
 import { useContext, useRef, useEffect } from 'react';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
+
 import { GlobalContext } from '../contexts/GlobalContext';
 import '../css/FavoriteHeart.css';
 

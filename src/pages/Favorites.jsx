@@ -39,7 +39,7 @@ export default function Favorites() {
         }
 
         return favoritesClass()
-    }, [searchValue, filterBy, sortOrder, classes])
+    }, [searchValue, filterBy, sortOrder, classes, liked])
 
 
     return (

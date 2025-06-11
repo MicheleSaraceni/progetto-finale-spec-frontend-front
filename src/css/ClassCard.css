@@ -1,34 +1,52 @@
 .classcard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     background-color: #422e1a;
     border: 3px solid #7c4f1d;
     border-radius: 0.5rem;
     transition: transform 0.2s ease-in-out;
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    /* lascia overflow visibile o scrollabile se mai dovesse servire */
+    overflow: auto;
 }
 
 .classcard-link {
     text-decoration: none;
+    margin: 0 0.5rem;
 }
 
 .classcard-img {
-    height: 180px;
+    flex: 0 0 180px;
+    /* altezza fissa di 180px */
+    width: 100%;
     object-fit: cover;
     border-bottom: 3px solid #7c4f1d;
 }
 
+.classcard>.favorite-heart {
+    flex: 0 0 auto;
+    /* il cuoricino non si espande */
+    margin: 0.5rem;
+    align-self: flex-end;
+}
+
 .classcard-body {
+    flex: 1 1 auto;
+    /* occupa tutto lo spazio rimanente */
     padding: 0.75rem;
     color: #dbc276;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* centra verticalmente titolo e categoria */
 }
 
 .classcard-title {
+    /* rimane com’era */
     font-family: 'Cinzel', serif;
-    font-size: 1.40rem;
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
 }
 
@@ -36,6 +54,7 @@
     font-style: italic;
     font-size: 0.9rem;
 }
+
 
 .classcard-link:hover .classcard {
     transform: scale(1.05);
