@@ -1,13 +1,10 @@
 .comparison-container {
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     background-color: #9c713f;
 }
 
-.comparison-controls {
-    margin-bottom: 2rem;
-}
-
 .comparison-select {
+    width: 100%;
     background-color: #422e1a;
     color: #dbc276;
     border: 2px solid #7c4f1d;
@@ -20,20 +17,27 @@
     border-color: #ffae01;
 }
 
-.comparison-content {
-    display: flex;
-    gap: 2rem;
-}
-
 .comparison-panel {
-    flex: 1;
-    padding: 0;
+    background-color: #422e1a;
+    border: 3px solid #7c4f1d;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    min-height: 200px;
+    overflow: auto;
 }
 
 .placeholder-text {
-    color: #422e1a;
+    color: #dbc276;
     font-family: 'Cinzel', serif;
     text-align: center;
-    margin-top: 3rem;
-    font-size: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    border: 1.5spx solid #7c4f1d;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 991.98px) {
+    .comparison-panel {
+        margin: 0 0.5rem;
+    }
 }

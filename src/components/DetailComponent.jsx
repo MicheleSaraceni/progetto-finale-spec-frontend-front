@@ -18,13 +18,14 @@ export default function DetailComponent({ id }) {
 
     return (
         <div className="class-detail-container">
-            <div className="detail-header d-flex align-items-center">
+            <FavoriteHeart id={specificClass.id} />
+            <div className="detail-header d-flex flex-column flex-lg-row align-items-center">
                 <img
                     src={specificClass.img}
                     alt={specificClass.title}
-                    className="detail-img me-4"
+                    className="detail-img mb-3 mb-lg-0 me-lg-4"
                 />
-                <div>
+                <div className="text-center text-lg-start">
                     <h1 className="detail-title">{specificClass.title}</h1>
                     <h4 className="detail-category">{specificClass.category}</h4>
                 </div>
@@ -32,22 +33,22 @@ export default function DetailComponent({ id }) {
 
             <p className="detail-description">{specificClass.description}</p>
 
-            <div className="detail-stats row">
-                <div className="col-md-4 stat-card">
+            <div className="detail-stats row row-cols-1 row-cols-lg-3 g-3">
+                <div className="col stat-card">
                     <h5>Dado Vita</h5>
                     <span className="stat-value">d{specificClass.lifeDice}</span>
                 </div>
-                <div className="col-md-4 stat-card">
+                <div className="col stat-card">
                     <h5>Caratteristica Principale</h5>
-                    <ul>
+                    <ul className="list-unstyled mb-0">
                         {specificClass.mainFeature.map((feat, i) => (
                             <li key={i}>{feat}</li>
                         ))}
                     </ul>
                 </div>
-                <div className="col-md-4 stat-card">
+                <div className="col stat-card">
                     <h5>Tiri Salvezza</h5>
-                    <ul>
+                    <ul className="list-unstyled mb-0">
                         {specificClass.ts.map((ts, i) => (
                             <li key={i}>{ts}</li>
                         ))}
@@ -56,7 +57,7 @@ export default function DetailComponent({ id }) {
             </div>
 
             <div className="detail-proficiency mt-4">
-                <h5>Comprtenze</h5>
+                <h5>Competenze</h5>
                 <ul className="proficiency-list">
                     {specificClass.proficiency.map((prof, i) => (
                         <li key={i}>{prof}</li>
@@ -64,11 +65,10 @@ export default function DetailComponent({ id }) {
                 </ul>
             </div>
 
-            <div className="detail-meta mt-4 d-flex justify-content-between">
+            <div className="detail-meta d-flex flex-column flex-lg-row justify-content-between align-items-center mt-4">
                 <span>Creato: {new Date(specificClass.createdAt).toLocaleDateString()}</span>
                 <span>Aggiornato: {new Date(specificClass.updatedAt).toLocaleDateString()}</span>
             </div>
-            <FavoriteHeart id={specificClass.id} />
         </div>
     );
 }

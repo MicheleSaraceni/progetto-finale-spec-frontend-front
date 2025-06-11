@@ -1,0 +1,310 @@
+[
+  {
+    "title": "Barbaro",
+    "category": "Combattente",
+    "description": "Il barbaro è un guerriero primitivo, feroce in combattimento corpo a corpo, capace di scatenare la propria rabbia e resistere ai danni.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/04/barbaro.png.webp",
+    "lifeDice": 12,
+    "mainFeature": [
+      "Furia",
+      "Immunità al veleno",
+      "Soprassalto bestiale"
+    ],
+    "ts": [
+      "Forza",
+      "Costituzione"
+    ],
+    "proficiency": [
+      "Armature leggere",
+      "Armature medie",
+      "Scudi",
+      "Armi semplici",
+      "Armi marziali"
+    ],
+    "id": 1,
+    "createdAt": "2025-06-10T11:43:37.052Z",
+    "updatedAt": "2025-06-10T11:43:37.052Z"
+  },
+  {
+    "title": "Bardo",
+    "category": "Incantatore",
+    "description": "Il bardo è un versatile incantatore di supporto, maestro nell’arte della parola e della musica, capace di ispirare gli alleati e manipolare le emozioni altrui.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/04/bardo.png.webp",
+    "lifeDice": 8,
+    "mainFeature": [
+      "Incantesimi di Bardo",
+      "Ispirazione bardica",
+      "Competenza negli strumenti musicali"
+    ],
+    "ts": [
+      "Destrezza",
+      "Carisma"
+    ],
+    "proficiency": [
+      "Armature leggere",
+      "Armi semplici",
+      "Balestra leggera",
+      "Spada lunga",
+      "Spada corta",
+      "Strumenti musicali (3 a scelta)"
+    ],
+    "id": 2,
+    "createdAt": "2025-06-10T11:43:56.051Z",
+    "updatedAt": "2025-06-10T11:43:56.051Z"
+  },
+  {
+    "title": "Chierico",
+    "category": "Incantatore Divino",
+    "description": "Il chierico è un devoto servitore di una divinità, in grado di lanciare potenti incantesimi divini per curare, proteggere o infliggere danni ai nemici.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/03/chierico.png.webp",
+    "lifeDice": 8,
+    "mainFeature": [
+      "Incantesimi divini",
+      "Dominio divino"
+    ],
+    "ts": [
+      "Saggezza",
+      "Carisma"
+    ],
+    "proficiency": [
+      "Armature leggere",
+      "Armature medie",
+      "Scudi",
+      "Armi semplici"
+    ],
+    "id": 3,
+    "createdAt": "2025-06-10T11:44:09.614Z",
+    "updatedAt": "2025-06-10T11:44:09.614Z"
+  },
+  {
+    "title": "Druido",
+    "category": "Incantatore Divino",
+    "description": "Il druido è un custode della natura, capace di trasformarsi in creature selvagge e di evocare la forza degli elementi per difendere il mondo naturale.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/04/druido.png.webp",
+    "lifeDice": 8,
+    "mainFeature": [
+      "Incantesimi druido",
+      "Forma selvatica"
+    ],
+    "ts": [
+      "Intelligenza",
+      "Saggezza"
+    ],
+    "proficiency": [
+      "Armature leggere (senza metallo)",
+      "Armature medie (senza metallo)",
+      "Scudi (senza metallo)",
+      "Armi semplici",
+      "Scimitarre",
+      "Kit dell’erborista"
+    ],
+    "id": 4,
+    "createdAt": "2025-06-10T11:44:19.864Z",
+    "updatedAt": "2025-06-10T11:44:19.864Z"
+  },
+  {
+    "title": "Guerriero",
+    "category": "Combattente",
+    "description": "Il guerriero è un esperto soldato, abile nell’utilizzo di qualsiasi arma e armatura, capace di resistere a lungo in prima linea e di infliggere danni continui.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/04/guerriero.png.webp",
+    "lifeDice": 10,
+    "mainFeature": [
+      "Stile di combattimento",
+      "Secondo attacco",
+      "Archetipo marziale"
+    ],
+    "ts": [
+      "Forza",
+      "Costituzione"
+    ],
+    "proficiency": [
+      "Armature leggere",
+      "Armature medie",
+      "Armature pesanti",
+      "Scudi",
+      "Armi semplici",
+      "Armi marziali"
+    ],
+    "id": 5,
+    "createdAt": "2025-06-10T11:44:29.305Z",
+    "updatedAt": "2025-06-10T11:44:29.305Z"
+  },
+  {
+    "title": "Ladro",
+    "category": "Combattente Abilità",
+    "description": "Il ladro è un maestro furtivo, letale negli attacchi a sorpresa e abile nell’inganno, nello scassinare serrature e nell’eludere trappole.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/04/ladro.png.webp",
+    "lifeDice": 8,
+    "mainFeature": [
+      "Attacco furtivo",
+      "Mani leste",
+      "Evasione"
+    ],
+    "ts": [
+      "Destrezza",
+      "Intelligenza"
+    ],
+    "proficiency": [
+      "Armature leggere",
+      "Armi semplici",
+      "Balestra leggera",
+      "Spada lunga",
+      "Spada corta",
+      "Attrezzi da ladro"
+    ],
+    "id": 6,
+    "createdAt": "2025-06-10T11:44:40.955Z",
+    "updatedAt": "2025-06-10T11:44:40.955Z"
+  },
+  {
+    "title": "Mago",
+    "category": "Incantatore Arcano",
+    "description": "Il mago è un sapiente studioso delle arti arcane, in grado di lanciare una vasta gamma di incantesimi che vanno dalla distruzione alla manipolazione della realtà.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/04/mago.png.webp",
+    "lifeDice": 6,
+    "mainFeature": [
+      "Incantesimi arcani",
+      "Conoscenza arcana",
+      "Archetipo arcano"
+    ],
+    "ts": [
+      "Intelligenza",
+      "Saggezza"
+    ],
+    "proficiency": [
+      "Pugnale",
+      "Dardo",
+      "Fionda",
+      "Bastone",
+      "Balestra leggera"
+    ],
+    "id": 7,
+    "createdAt": "2025-06-10T11:44:48.724Z",
+    "updatedAt": "2025-06-10T11:44:48.724Z"
+  },
+  {
+    "title": "Monaco",
+    "category": "Combattente",
+    "description": "Il monaco è un artista marziale ascetico, in grado di incanalare il ki per compiere imprese sovrumane in combattimento e in agilità.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/04/monaco.png.webp",
+    "lifeDice": 8,
+    "mainFeature": [
+      "Arti marziali",
+      "Punti ki",
+      "Movimenti del monaco"
+    ],
+    "ts": [
+      "Forza",
+      "Destrezza"
+    ],
+    "proficiency": [
+      "Armi semplici",
+      "Spade corte"
+    ],
+    "id": 8,
+    "createdAt": "2025-06-10T11:45:07.841Z",
+    "updatedAt": "2025-06-10T11:45:07.841Z"
+  },
+  {
+    "title": "Paladino",
+    "category": "Incantatore Combattente",
+    "description": "Il paladino è un guerriero sacro, votato a un giuramento che gli conferisce poteri divini per proteggere i deboli e punire i malvagi.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/04/paladino.png.webp",
+    "lifeDice": 10,
+    "mainFeature": [
+      "Imposizione delle mani",
+      "Aura di protezione",
+      "Imposizioni sacre"
+    ],
+    "ts": [
+      "Saggezza",
+      "Carisma"
+    ],
+    "proficiency": [
+      "Armature leggere",
+      "Armature medie",
+      "Armature pesanti",
+      "Scudi",
+      "Armi semplici",
+      "Armi marziali"
+    ],
+    "id": 9,
+    "createdAt": "2025-06-10T11:45:18.952Z",
+    "updatedAt": "2025-06-10T11:45:18.952Z"
+  },
+  {
+    "title": "Ranger",
+    "category": "Combattente",
+    "description": "Il ranger è un cacciatore esperto, padrone dell’ambiente naturale e capace di colpire i nemici a distanza o con la spada corta.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/ranger.png.webp",
+    "lifeDice": 10,
+    "mainFeature": [
+      "Nemico prescelto",
+      "Ambientazione favorevole",
+      "Archetipo del ranger"
+    ],
+    "ts": [
+      "Forza",
+      "Destrezza"
+    ],
+    "proficiency": [
+      "Armature leggere",
+      "Armature medie",
+      "Scudi",
+      "Armi semplici",
+      "Armi marziali"
+    ],
+    "id": 10,
+    "createdAt": "2025-06-10T11:45:25.856Z",
+    "updatedAt": "2025-06-10T11:45:25.856Z"
+  },
+  {
+    "title": "Stregone",
+    "category": "Incantatore Arcano",
+    "description": "Lo stregone trae il suo potere magico da un’origine arcana innata, lanciando incantesimi basati sulla sua forza di volontà e carisma.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/04/stregone.png.webp",
+    "lifeDice": 6,
+    "mainFeature": [
+      "Incantesimi dello stregone",
+      "Origine dello stregone",
+      "Punti magia metamagica"
+    ],
+    "ts": [
+      "Costituzione",
+      "Carisma"
+    ],
+    "proficiency": [
+      "Pugnale",
+      "Dardo",
+      "Fionda",
+      "Bastone",
+      "Balestra leggera"
+    ],
+    "id": 11,
+    "createdAt": "2025-06-10T11:45:34.487Z",
+    "updatedAt": "2025-06-10T11:45:34.487Z"
+  },
+  {
+    "title": "Warlock",
+    "category": "Incantatore Arcano",
+    "description": "Il warlock ha stretto un patto magico con un’entità potente, ottenendo poteri oscuri e invocazioni uniche che può utilizzare in battaglia.",
+    "img": "https://dungeonedraghi.it/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/04/warlock.png.webp",
+    "lifeDice": 8,
+    "mainFeature": [
+      "Patto con entità superiore",
+      "Invocazioni di patto",
+      "Università del warlock"
+    ],
+    "ts": [
+      "Saggezza",
+      "Carisma"
+    ],
+    "proficiency": [
+      "Armature leggere",
+      "Armi semplici"
+    ],
+    "id": 12,
+    "createdAt": "2025-06-10T11:45:47.844Z",
+    "updatedAt": "2025-06-10T11:45:47.844Z"
+  }
+]

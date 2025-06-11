@@ -46,7 +46,6 @@
     border-radius: 0.5rem;
     padding: 1rem;
     text-align: center;
-    margin-bottom: 1rem;
 }
 
 .stat-card h5 {
@@ -76,11 +75,36 @@
     flex: 1 1 45%;
 }
 
-.detail-meta {
+.detail-meta span {
     font-size: 0.85rem;
     color: #a76a24;
 }
 
 .class-detail-container a:hover {
     color: #f4e3b2;
+}
+
+@media (max-width: 991.98px) {
+    .detail-img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+
+    .detail-header {
+        text-align: center;
+    }
+
+    .detail-description {
+        font-size: 0.95rem;
+    }
+
+    .proficiency-list li {
+        flex: 1 1 100%;
+    }
+
+    .detail-meta {
+        text-align: center;
+        gap: 0.5rem;
+    }
 }
